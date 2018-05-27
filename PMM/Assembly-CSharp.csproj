@@ -51,9 +51,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\CommonPanel.cs" />
      <Compile Include="Assets\Scripts\CommonParameter.cs" />
+     <Compile Include="Assets\Scripts\DaughterPanel.cs" />
      <Compile Include="Assets\Scripts\DaughterParameter.cs" />
+     <Compile Include="Assets\Scripts\FatherPanel.cs" />
      <Compile Include="Assets\Scripts\FatherParameter.cs" />
+     <Compile Include="Assets\Scripts\SimManager.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
