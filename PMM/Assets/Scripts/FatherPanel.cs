@@ -17,19 +17,21 @@ public class FatherPanel : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		fatherParameter = FindObjectOfType<FatherParameter>();
+		
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if(fatherParameter.initialized)
-		{
-			Initialize();
-			fatherParameter.initialized = false;
-		}
+
 	}
 
-	void Initialize()
+	public void InitializeByStart() {
+		fatherParameter = FindObjectOfType<FatherParameter>();
+		fatherParameter.Initialize();
+		Initialize();
+	}
+
+	public void Initialize()
 	{
 		if(fatherParameter.firstDream == FatherParameter.fatherDream.nonexistant)
 		{

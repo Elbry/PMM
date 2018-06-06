@@ -6,15 +6,11 @@ public class CommonParameter : MonoBehaviour {
 
 	public int gold;
 	public int cleanliness;
-	
-	public bool initialized = false;
 
-	SimManager simManager;
 
 	// Use this for initialization
 	void Start () {
-		simManager = FindObjectOfType<SimManager>();
-		Initialize();
+
 	}
 	
 	// Update is called once per frame
@@ -22,11 +18,14 @@ public class CommonParameter : MonoBehaviour {
 		
 	}
 
-	void Initialize()
+	public void Initialize()
 	{
 		gold = PlayerPrefs.GetInt("money", 2000);
 		cleanliness = PlayerPrefs.GetInt("cleanliness", 100);
+	}
 
-		initialized = true;
+	public void Save(){
+		PlayerPrefs.SetInt("money", gold);
+		PlayerPrefs.SetInt("cleanliness", cleanliness);
 	}
 }

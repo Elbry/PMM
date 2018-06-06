@@ -9,14 +9,10 @@ public class DaughterParameter : MonoBehaviour {
 	public int dignity;
 	public int sense;
 
-	public bool initialized = false;
-	
-	SimManager simManager;
 
 	// Use this for initialization
 	void Start () {
-		simManager = FindObjectOfType<SimManager>();
-		Initialize();
+
 	}
 	
 	// Update is called once per frame
@@ -24,13 +20,18 @@ public class DaughterParameter : MonoBehaviour {
 		
 	}
 
-	void Initialize()
+	public void Initialize()
 	{
 		strength = PlayerPrefs.GetInt("DaughterStrength", 0);
 		intelligence = PlayerPrefs.GetInt("DaughterIntelligence", 0);
 		dignity = PlayerPrefs.GetInt("DaughterDignity", 0);
 		sense = PlayerPrefs.GetInt("DaughterSense", 0);
+	}
 
-		initialized = true;
+	public void Save() {
+		PlayerPrefs.SetInt("DaughterStrength", strength);
+		PlayerPrefs.SetInt("DaughterIntelligence", intelligence);
+		PlayerPrefs.SetInt("DaughterDignity", dignity);
+		PlayerPrefs.SetInt("DaughterSense", sense);
 	}
 }

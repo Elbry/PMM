@@ -1,0 +1,16 @@
+6/6/2018 4:37:07 PM
+Father: St500, In100, Di100, Se50, Ss0, Wi0
+DaughterSt0, In0, Di0, Se0
+Money: 2000, Cleanliness: 100
+First Dream: princessMaking, Second Dream: nonexistant
+6/6/2018 4:37:45 PM
+Father: St500, In100, Di100, Se50, Ss0, Wi0
+Daughter: St0, In0, Di0, Se0
+Money: 2000, Cleanliness: 100
+First Dream: princessMaking, Second Dream: nonexistant
+6/6/2018 4:38:24 PM
+Father: St500, In100, Di100, Se50, Ss0, Wi0
+Daughter: St0, In0, Di0, Se0
+Money: 2000, Cleanliness: 100
+First Dream: princessMaking, Second Dream: nonexistant
+

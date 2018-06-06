@@ -16,15 +16,8 @@ public enum fatherDream{nonexistant, princessMaking};
 	public fatherDream firstDream;
 	public fatherDream secondDream;
 
-	//bool 변수 만들어서 체크하는 것 말고 방법 없을까? (현재 fatherPanel의 Start()가 먼저 호출되어서 Init된 것이 UI에 안 뜸)
-	public bool initialized = false;
-
-	SimManager simManager;
-
 	// Use this for initialization
 	void Start () {
-		simManager = FindObjectOfType<SimManager>();
-		Initialize();
 	}
 	
 	// Update is called once per frame
@@ -32,7 +25,7 @@ public enum fatherDream{nonexistant, princessMaking};
 
 	}
 
-	void Initialize()
+	public void Initialize()
 	{
 		strength = PlayerPrefs.GetInt("FatherStrength", 500);
 		intelligence = PlayerPrefs.GetInt("FatherIntelligence", 100);
@@ -43,8 +36,18 @@ public enum fatherDream{nonexistant, princessMaking};
 
 		firstDream = (fatherDream)PlayerPrefs.GetInt("FirstDream", 1);
 		secondDream = (fatherDream)PlayerPrefs.GetInt("SecondDream", 0);
+	}
 
-		initialized = true;
+	public void Save(){
+		PlayerPrefs.SetInt("FatherStrength", strength);
+		PlayerPrefs.SetInt("FatherIntelligence", intelligence);
+		PlayerPrefs.SetInt("FatherDignity", dignity);
+		PlayerPrefs.SetInt("FatherSense", sense);
+		PlayerPrefs.SetInt("Stress", stress);
+		PlayerPrefs.SetInt("Will", will);
+
+		PlayerPrefs.SetInt("FirstDream", (int)firstDream);
+		PlayerPrefs.SetInt("SecondDream", (int)secondDream);
 	}
 
 }

@@ -11,19 +11,21 @@ public class CommonPanel : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		commonParameter = FindObjectOfType<CommonParameter>();
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if(commonParameter.initialized)
-		{
-			Initialize();
-			commonParameter.initialized = false;
-		}
+
 	}
 
-	void Initialize()
+	public void InitializeByStart(){
+		commonParameter = FindObjectOfType<CommonParameter>();
+		commonParameter.Initialize();
+		Initialize();
+	}
+
+	public void Initialize()
 	{
 		goldText.text = commonParameter.gold.ToString("N0");
 		cleanlinessText.text = commonParameter.cleanliness.ToString("N0");

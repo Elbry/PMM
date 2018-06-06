@@ -58,6 +58,7 @@
      <Compile Include="Assets\Scripts\FatherPanel.cs" />
      <Compile Include="Assets\Scripts\FatherParameter.cs" />
      <Compile Include="Assets\Scripts\SimManager.cs" />
+     <None Include="Assets\Resources\SimData.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

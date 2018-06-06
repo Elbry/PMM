@@ -13,19 +13,21 @@ public class DaughterPanel : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		daughterParameter = FindObjectOfType<DaughterParameter>();	
+		
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if(daughterParameter.initialized)
-		{
-			Initialize();
-			daughterParameter.initialized = false;
-		}
+
 	}
 
-	void Initialize()
+	public void InitializeByStart() {
+		daughterParameter = FindObjectOfType<DaughterParameter>();	
+		daughterParameter.Initialize();
+		Initialize();
+	}
+
+	public void Initialize()
 	{
 		strengthText.text = daughterParameter.strength.ToString("N0");
 		intelligenceText.text = daughterParameter.intelligence.ToString("N0");
